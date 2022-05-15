@@ -1,0 +1,602 @@
+:root {
+    --red: #ff2e63;
+    --black: #252a34;
+    --blue: #08d9d6;
+    --white: #eaeaea;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #fff;
+    overflow-x: hidden;
+    font-family: 'Relawey', sans-serif;
+}
+/*Menu de navegacion*/
+#header{
+    position: relative;
+    width: 100%;
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+
+.menu .logotipo{
+    margin-left: 20px;
+
+}
+
+.menu .logotipo h1 a{
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: 400;
+    color: var(--black);
+}
+
+.menu .list-container {
+    margin-right: 20px;
+}
+
+.menu  .list-container .lists{
+    display: flex;
+}
+
+.menu .list-container .lists li{
+    list-style: none;
+}
+
+.menu .list-container .lists li a{
+    text-decoration: none;
+    margin: 8px 10px;
+    padding: 9px;
+    color: var(--black);
+    border-radius: 24px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.menu .list-container .lists li a.activo{
+    background: var(--black);
+    color: #fff;
+}
+
+.menu .list-container .lists li a:hover{
+    background: var(--black);
+    color: #fff;
+}
+
+.btn-menu > .fa-bars{
+    display: none;
+}
+
+/*IMG Header*/
+
+.img-header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(img3.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.img-header .bienvenido{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-header .bienvenido h1{
+    font-size: 50px;
+    align-items: center;
+    color: #fff;
+    font-weight: 200;
+}
+
+.img-header .bienvenido hr{
+    width: 400px;
+    height: 2px;
+    background: #fff;
+    border: none;
+    margin-top: 5px;
+}
+
+.img-header .bienvenido p{
+    text-align: justify;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.img-header .bienvenido > button{
+    width: 170px;
+    margin: 40px;
+    background: var(--red);
+    border-radius: 24px;
+    border: none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    outline: none;
+}
+
+.img-header .bienvenido > button:hover{
+    background: var(--blue);
+}
+
+/*Acerca de mi */
+.acerca-de {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.acerca-de .info-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    flex-direction: column;
+}
+
+.acerca-de .info-container h1{
+    font-size: 50px;
+    font-weight: 400;
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.acerca-de .info-container p{
+    text-align: center;
+    font-size: 17px;
+    color: var(--black);
+    line-height: 35px;
+    margin: 10px 0px;
+}
+
+.acerca-de .info-container .about-more {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.acerca-de .info-container .about-more button{
+    width: 120px;
+    margin: 40px;
+    background: var(--black);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.acerca-de .info-container .about-more button:hover{
+    background: #08d9d6;
+    color: #252a34;
+}
+
+/** Mis experiencias**/
+
+.misexp{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.misexp .misexp-title{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.misexp .misexp-title h2{
+    font-size: 50px;
+    align-items: center;
+    color: var(--black);
+    font-weight: 200;
+    
+}
+
+.misexp .box-misexp {
+    width: 90%;
+    margin: auto;  
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    float: left;
+    float: right;
+}
+
+.misexp .box-misexp .card-misexp{
+    width: 40%;
+    margin: 20px auto;
+    display: inline-table;
+}
+
+.misexp .box-misexp .card-misexp .misexp-text{
+    width: 100%;
+    border: 2px solid var(--black);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.misexp .box-misexp .card-misexp .misexp-text h4{
+    color: var(--black);
+    font-weight: normal;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: 200ms;
+}
+
+.misexp .box-misexp .card-misexp .misexp-text p{
+    font-size: 19px;
+    color: var(--black);
+    text-align: center;
+    line-height: 35px;
+    transition: 200ms;
+}
+
+.misexp .box-misexp .card-misexp .misexp-text ul{
+    color: var(--black);
+    text-align: center;
+    line-height: 35px;
+    transition: 200ms;
+}
+
+.misexp .box-misexp .card-misexp .misexp-text:hover{
+    border: 2px solid var(blue);
+}
+
+.misexp .box-misexp .card-misexp .misexp-text:hover h4{
+    color: var(blue);
+}
+
+/** Mi formacion**/
+.imagenFormacion{
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    background: url(miCodigo.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imagenFormacion h1{
+    font-size: 50px;
+    align-items: center;
+    color: #fff;
+    font-weight: 200;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    flex-wrap: wrap;
+}
+
+.imagenFormacion .tituloFormacion{
+    width: 80%;
+    margin: 10px;
+    border: 2px solid #fff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contendor{
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(2, 180px);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    flex-wrap: wrap;
+    float: right;
+    flex-direction: column;
+}
+
+.formacion{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+.Infotep{
+    min-width: 200px;
+    flex-wrap: wrap;
+}
+
+.Universitarios{
+    min-width: 300px;
+    flex-wrap: wrap;
+}
+
+.Educate{
+    min-width: 300px;
+    flex-wrap: wrap;
+}
+
+.Otro{
+    min-width: 300px;
+    flex-wrap: wrap;
+}
+
+.Sena{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 300px;
+}
+
+ul {
+    list-style: none;
+}
+
+li{
+    padding: 2px;
+}
+
+.soyP{
+    padding: 20px;
+}
+
+/** Social**/
+.social {
+    margin: 50px;
+}
+.social p{ 
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #eaeaea;
+}
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #eaeaea;
+    
+}
+
+.links a{
+    margin: 0 15px;
+    color: #eaeaea;
+}
+
+/** Footer**/
+
+.footer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(escritorio.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.footer .deg-footer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+}
+
+.footer .ejeZfooter{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.footer .footer-content{
+    padding-top: 100px;
+    margin: auto;
+    padding-bottom: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .footer-content .footer-title{
+    width: 50%;
+    margin: auto;
+    border: 2px solid #fff;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer .footer-content .footer-title h2{
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 6px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .footer-content .footer-title hr{
+    background: #fff;
+    height: 2px;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagenContacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contedorDeBotones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contedorTelegram{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.estaImagen{
+    display: flex;
+    width: 30%;
+    height: 40%;
+    padding: 15px;
+    border-radius: 45px;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    -ms-border-radius: 45px;
+    -o-border-radius: 45px;
+    border: rgb(92, 157, 231) solid 3px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 20px;
+}
+
+.btnWhatsapp{
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(254, 254, 254);
+    background-color: rgb(24, 202, 24);
+    text-size-adjust: 14px;
+    border: #fff solid 2px;
+    border-radius: 45px;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    -ms-border-radius: 45px;
+    -o-border-radius: 45px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.btnWhatsapp:hover{
+    background-color: #252a34;
+}
+
+.btnTelegram:hover{
+    background-color: #252a34;
+}
+
+
+.btnTelegram{
+    display: flex;
+    width: 100px;
+    height: 40px;
+    color: rgb(254, 254, 254);
+    background-color: rgb(8, 128, 220);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-size-adjust: 14px;
+    border: #fff solid 2px;
+    border-radius: 45px;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    -ms-border-radius: 45px;
+    -o-border-radius: 45px;
+    cursor: pointer;
+}
+
+.footer .footer-text{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: rgba(0,0,0,0.8);
+    border-top: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer .footer-text p{
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.footer .footer-text h4{
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/** Footer**/
+#e{
+    max-width: 100%; 
+    text-align: center; 
+    width: 100%;
+}
